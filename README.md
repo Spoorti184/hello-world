@@ -1,22 +1,21 @@
 import requests
 
-# Replace with your GitHub username and token
-username = 'your-username'
-token = 'your-token'
-repo_name = 'my-repository'
+url = "https://api.github.com/gists"
+headers = {"Authorization": "token YOUR_GITHUB_TOKEN"}
 
-url = f'https://api.github.com/repos/{username}/{repo_name}/issues'
-headers = {
-    'Authorization': f'token {token}'
-}
-issue_data = {
-    'title': 'New Issue',
-    'body': 'This is a test issue created through the GitHub API.'
+gist = {
+    "description": "Example Gist",
+    "public": True,
+    "files": {
+        "example.txt": {
+            "content": "This is an example gist created using the API."
+        }
+    }
 }
 
-response = requests.post(url, json=issue_data, headers=headers)
+response = requests.post(url, json=gist, headers=headers)
 
 if response.status_code == 201:
-    print('Issue created successfully!')
+    print("Gist created successfully!")
 else:
-    print(f'Failed to create issue: {response.status_code}')
+    print(f"Failed to create Gist: {response.status_code}")

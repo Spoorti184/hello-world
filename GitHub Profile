@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>GitHub Profile</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f6f8fa;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            max-width: 1200px;
+        }
+
+        header {
+            background-color: #24292f;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+
+        .profile {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .profile img {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            margin-right: 20px;
+        }
+
+        .profile-details {
+            color: #24292f;
+        }
+
+        .profile-details h2 {
+            font-size: 2rem;
+            margin: 0;
+        }
+
+        .profile-details p {
+            font-size: 1.2rem;
+            margin: 5px 0;
+        }
+
+        .profile-details a {
+            color: #0366d6;
+            text-decoration: none;
+        }
+
+        .profile-details a:hover {
+            text-decoration: underline;
+        }
+
+        .section {
+            margin-top: 40px;
+        }
+
+        .section h3 {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+        }
+
+        .repositories ul, .followers ul, .following ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .repositories li, .followers li, .following li {
+            background-color: white;
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 6px;
+            border: 1px solid #e1e4e8;
+        }
+
+        .repositories li a, .followers li a, .following li a {
+            color: #0366d6;
+            text-decoration: none;
+        }
+
+        .repositories li a:hover, .followers li a:hover, .following li a:hover {
+            text-decoration: underline;
+        }
+
+        .stats {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 40px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .stats div {
+            text-align: center;
+        }
+
+        .stats h4 {
+            margin: 0;
+        }
+
+        .stats p {
+            margin: 5px 0;
+            font-size: 1.2rem;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #24292f;
+            color: white;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <h1>GitHub Profile</h1>
+        </div>
+    </header>
+
+    <div class="container">
+        <!-- Profile Section -->
+        <section class="profile">
+            <img src="https://avatars.githubusercontent.com/u/583231?v=4" alt="Profile Picture">
+            <div class="profile-details">
+                <h2>Octocat</h2>
+                <p><a href="https://github.com/octocat">github.com/octocat</a></p>
+                <p>Location: San Francisco</p>
+                <p>Company: GitHub</p>
+                <p>Bio: GitHub's mascot, a friendly octopus</p>
+            </div>
+        </section>
+
+        <!-- Stats Section -->
+        <section class="stats">
+            <div>
+                <h4>Repositories</h4>
+                <p>150</p>
+            </div>
+            <div>
+                <h4>Followers</h4>
+                <p>200</p>
+            </div>
+            <div>
+                <h4>Following</h4>
+                <p>80</p>
+            </div>
+        </section>
+
+        <!-- Repositories Section -->
+        <section class="section repositories">
+            <h3>Repositories</h3>
+            <ul>
+                <li><a href="https://github.com/octocat/Hello-World">Hello-World</a></li>
+                <li><a href="https://github.com/octocat/Spoon-Knife">Spoon-Knife</a></li>
+                <li><a href="https://github.com/octocat/test-repository">Test-Repository</a></li>
+                <li><a href="https://github.com/octocat/octo-repo">Octo-Repo</a></li>
+            </ul>
+        </section>
+
+        <!-- Followers Section -->
+        <section class="section followers">
+            <h3>Followers</h3>
+            <ul>
+                <li><a href="https://github.com/user1">user1</a></li>
+                <li><a href="https://github.com/user2">user2</a></li>
+                <li><a href="https://github.com/user3">user3</a></li>
+                <li><a href="https://github.com/user4">user4</a></li>
+            </ul>
+        </section>
+
+        <!-- Following Section -->
+        <section class="section following">
+            <h3>Following</h3>
+            <ul>
+                <li><a href="https://github.com/user5">user5</a></li>
+                <li><a href="https://github.com/user6">user6</a></li>
+                <li><a href="https://github.com/user7">user7</a></li>
+                <li><a href="https://github.com/user8">user8</a></li>
+            </ul>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 GitHub Profile</p>
+    </footer>
+
+    <script>
+        // Example of interactive feature: a simple alert on click of a repository link
+        const repoLinks = document.querySelectorAll('.repositories li a');
+        repoLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                alert('You clicked on a repository!');
+            });
+        });
+    </script>
+</body>
+
+</html>
